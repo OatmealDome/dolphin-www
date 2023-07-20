@@ -13,13 +13,6 @@
     </form>
 </div>
 
-<div class="well text-center">
-    <ins class="adsbygoogle"
-    style="display:inline-block;width:200px;height:200px"
-    data-ad-client="ca-pub-8646203626363069"
-    data-ad-slot="9795528512"></ins>
-</div>
-
 <div class="well">
     <h4>{% trans "Blog tags" %}</h4>
     {% get_tag_cloud %}
@@ -29,4 +22,13 @@
     <h4>{% trans "Blog series" %}</h4>
     {% get_recent_blog_series 3 %}
     <p class="seemore"><a href="{% url 'dolweb_blog_series_index' %}">{% trans "See all" %} »</a></p>
+</div>
+
+<div class="well">
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-8646203626363069"
+        data-ad-slot="6378265265"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
 </div>
