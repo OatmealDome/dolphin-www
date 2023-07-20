@@ -144,7 +144,9 @@
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="{% static "js/bootstrap.min.js" %}"></script>
         <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
+            [].forEach.call(document.querySelectorAll('.adsbygoogle'), function(){
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            });
         </script>
         {% block "extrajs" %}
         {% endblock %}
