@@ -10,7 +10,7 @@ from zinnia.markups import textile
 from zinnia.markups import markdown
 from zinnia.markups import restructuredtext
 from zinnia.settings import UPLOAD_TO, MARKUP_LANGUAGE
-from zinnia.managers import PUBLISHED
+from zinnia.managers import DRAFT, PUBLISHED
 from zinnia.models_bases.entry import AbstractEntry
 
 
@@ -93,7 +93,7 @@ class BlogEntry(AbstractEntry):
 
     @property
     def draft(self):
-        return self.status != PUBLISHED
+        return self.status == DRAFT
 
     # The default Zinnia implementation of this does stupid content sniffing,
     # assuming that if something contains </p> it is raw HTML. That's not true,
